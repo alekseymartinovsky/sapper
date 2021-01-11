@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Сапёр</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div id="options">
+		<div>
+			<h1>САПЁР</h1>
+			<h2>Выберите уровень сложности: </h2>
+			<div class="sliderCenter">
+				<div class="slider">
+					<a href="#" onclick="options.changeLevel(0)" class="slider_button"><</a>
+					<div id="level" class="slider_lvl">Новичёк</div>
+					<a href="#" onclick="options.changeLevel(1)" class="slider_button">></a>
+				</div>
+			</div>
+		</div>
+		<a href="#" class="start_button" onclick="game.start()">Начать</a>
+	</div>
+
+	<div id="game" hidden="true">
+		<div>
+			<table id="field">
+				
+			</table>
+		</div>
+		<div class="time_block">
+			<div class="str_div">
+				<div class="text_time_block">Время:</div>
+				<div id="stopwatch">00:00</div>
+			</div>
+			<div class="str_div">
+				<div class="text_time_block">Флагов осталось:</div>
+				<div id="flag"></div>
+			</div>
+		</div>
+	</div>
+
+	<div id="result" hidden="true">
+		<div id="statusGame" class="center_content"></div>
+			<div>
+				<div id="timeGame" class="center_content">Ваше время: </div>
+				<div id="bestTime" class="center_content">Лучшее время: </div>
+			</div>
+			<div class="center_content">
+				<a href="" class="start_button" onclick="game.newGame()">Играть снова</a>
+			</div>
+	</div>
+
+	<div id="all_result">
+		<div>
+			<table id="all_result_table">
+				<caption id="caption_result_table">Ваши рекорды:</caption>
+				<tr>
+					<td>Новичок</td>
+					<td id="res_1"></td>
+				</tr>
+				<tr>
+					<td>Любитель</td>
+					<td id="res_2"></td>
+				</tr>
+				<tr>
+					<td>Профессионал</td>
+					<td id="res_3"></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+
+	<div id="info_button" onclick="info.click()">
+		<div id="i">
+		<svg id="svg_i" version="1.1" class="info_svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 226 226"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="2" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="15" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,226v-226h226v226z" fill="none"></path><g id="color_info" fill="#335073"><path d="M113,9.04c-57.36199,0 -103.96,46.59801 -103.96,103.96c0,57.36199 46.59801,103.96 103.96,103.96c57.36199,0 103.96,-46.59801 103.96,-103.96c0,-57.36199 -46.59801,-103.96 -103.96,-103.96zM113,18.08c52.4764,0 94.92,42.4436 94.92,94.92c0,52.4764 -42.4436,94.92 -94.92,94.92c-52.4764,0 -94.92,-42.4436 -94.92,-94.92c0,-52.4764 42.4436,-94.92 94.92,-94.92zM113,49.72c-7.48898,0 -13.56,6.07102 -13.56,13.56c0,7.48898 6.07102,13.56 13.56,13.56c7.48898,0 13.56,-6.07102 13.56,-13.56c0,-7.48898 -6.07102,-13.56 -13.56,-13.56zM94.92,94.92v9.04h4.52h4.52v58.76h-4.52h-4.52v9.04h4.52h4.52h18.08h4.52h4.52v-9.04h-4.52h-4.52v-67.8h-4.52h-18.08z"></path></g></g></svg>
+		</div>
+
+		<div id="x" hidden = "true">
+		<svg hidden ="true" id="svg_x" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 80 80" style="enable-background:new 0 0 80 80;" xml:space="preserve" width="80" height="80">
+		<g id="color_x" fill="#335073">
+		<polygon points="40,49.007 15.714,73.293 6.707,64.286 30.993,40 6.707,15.714 15.714,6.707 40,30.993    64.286,6.707 73.293,15.714 49.007,40 73.293,64.286 64.286,73.293  "/>
+		</g>
+		</svg>
+		</div>
+	</div>
+
+	<div id="regulations" hidden="true">
+		<p class="regulations_text">
+			<ul class="regulations_text">
+				<li>
+					Число в ячейке показывает, сколько мин скрыто вокруг данной ячейки . Это число поможет понять вам, где находятся безопасные ячейки, а где находятся бомбы.
+				</li>
+				<li>
+					Если рядом с открытой ячейкой есть пустая ячейка, то она откроется автоматически.
+				</li>
+				<li>
+					Если вы открыли ячейку с миной, то игра проиграна.
+				</li>
+				<li>
+					Чтобы пометить ячейку, в которой находится бомба, нажмите её правой кнопкой мыши.
+				</li>
+				<li>
+					Eсли в ячейке указано число, оно показывает, сколько мин скрыто в восьми ячейках вокруг данной. Это число помогает понять, где находятся безопасные ячейки.
+				</li>
+				<li>
+					Игра продолжается до тех пор, пока вы не откроете все не заминированные ячейки.
+				</li>
+			</ul>
+		</p>
+	</div>
+
+	<script type="text/javascript" src="code.js"></script>
+</body>
+</html>

@@ -1,0 +1,331 @@
+@font-face{
+	font-family: Roboto;
+	src: url(font/Roboto-Light.ttf);
+}
+
+html{
+	margin: 0;
+	padding: 0;
+	font-size: 24px;
+	font-family: Roboto;
+	font-weight: 200;
+	background-color: #FDFFE6;
+}
+
+h1{
+	font-size: 28px;
+	color: #303640;
+}
+
+h2{
+	font-size: 24px;
+	color: #303640;
+}
+
+a{
+	color: black;
+	text-decoration: none;
+}
+
+table{
+	border-collapse: collapse;
+}
+
+td{
+	width: 25px;
+	height: 25px;
+	border: 1px solid black;
+}
+
+p{
+	margin: 0;
+	padding: 0;
+}
+
+#options{
+	padding-top: 5%;
+	text-align: center;
+}
+
+.slider{
+	display: flex;
+	font-size: 20px;
+	align-items: center;
+	margin-bottom: 20px;
+	font-weight: 700;
+}
+
+.slider_lvl{
+	min-width: 100px;
+	padding: 0 5px;
+}
+
+.sliderCenter{
+	display: inline-block;
+	margin: 0 auto;
+}
+
+.slider_button{
+	font-weight: 700;
+	padding: 0 10px;
+}
+
+.slider_button:hover{
+	background: #303640;
+	color: #FDFFE6;
+}
+
+.start_button{
+	border: 1px solid black;
+	padding: 2px 10px;
+
+	transition: all 500ms ease; 
+}
+
+.start_button:hover{
+	background: #303640;
+	color: #FDFFE6;
+}
+
+#info_button{
+	width: 40px;
+	height: 40px;
+	margin: 0 auto;
+	margin-top: 20px;
+}
+
+.info_svg:hover #color_info{
+	fill: #FFD2BF;
+}
+
+#svg_x{
+	width: 40px;
+	height: 40px;
+	margin: 0 auto;
+}
+
+#svg_x:hover #color_x{
+	fill: #FFD2BF;
+}
+
+#field{
+	font-size: 16px;
+	font-weight: 700;
+	color: #FFD2BF;
+}
+
+#field tr th{
+	text-align: center;
+}
+
+.cell{
+
+}
+
+.closeCell{ /*закрытая ячейка*/
+	background: #335073;
+}
+
+.emptyCell{ /*ячейка открыта и в ней ничего нет*/
+	background: #FDFFE6;
+}
+
+.bombCell{
+	background-image: url(img/bomb.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-color: #FDFFE6;
+}
+
+.fewCell{
+	color: blue;
+	background: #FDFFE6;
+	text-align: center;
+}
+
+.middleCell{
+	color: green;
+	background: #FDFFE6;
+	text-align: center;
+}
+
+.lotCell{
+	color: red;
+	background: #FDFFE6;
+	text-align: center;
+}
+
+.flag{
+	background-image: url(img/flag.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-color: #303640;
+}
+
+#all_result_table{
+	margin: 0 auto;
+	margin-top: 20px;
+	font-size: 18px;
+	margin: 0 auto;
+}
+
+#all_result_table td{
+	border-color: #FDFFE6;
+	border-bottom-color: black;
+	text-align: center;
+}
+
+#caption_result_table{
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+
+#info_button{
+	position: absolute;
+	top: 1%;
+	right: 5%;
+}
+
+.regulations_text li{
+	font-size: 18px;
+	max-width: 60%;
+	margin: 0 auto;
+	padding-top: 10px;
+}
+
+#field{
+	margin: 0 auto;
+	margin-top: 5%;
+}
+
+.str_div{
+	display: flex;
+	font-size: 18px;
+	justify-content: center;
+}
+
+.time_block{
+	margin-top: 10px;
+}
+
+.text_time_block{
+	padding-right: 5px;
+}
+
+#result{
+	margin-top: 5%;
+}
+
+.center_content{
+	text-align: center;
+	margin-top: 10px;
+}
+
+@media (max-device-width : 425px) {
+	html{
+		font-size: 54px;
+	}
+
+	h1{
+		font-size: 64px;
+	}
+
+	h2{
+		font-size: 	54px;
+	}
+
+	td{
+		width: 50px;
+		height: 50px;
+	}
+
+	.slider_lvl{
+		font-size: 45px;
+	}
+
+	#options{
+		padding-top: 15%;
+	}
+
+	.slider{
+		font-size: 45px;
+		margin-bottom: 45px;
+	}
+
+	.slider_lvl{
+		min-width: 230px;
+		padding: 0 10px;
+	}
+	
+	.slider_button{
+		padding: 0 23px;
+	}
+	
+	.start_button{
+		border: 1px;
+		padding: 4px 23px;
+	}
+	
+	#info_button{
+		width: 92px;
+		height: 92px;
+		margin-top: 46px;
+	}
+	
+	#svg_x{
+		width: 92px;
+		height: 92px;
+	}
+	
+	
+	#field{
+		font-size: 36px;
+	}
+	
+	
+	#all_result_table{
+		margin-top: 45px;
+		font-size: 41px;
+	
+	}
+		
+	#caption_result_table{
+		padding-bottom: 23px;
+		padding-top: 23px;
+	}
+	
+	#info_button{
+		top: 5%;
+		right: 5%;
+	}
+	
+	.regulations_text li{
+		font-size: 41px;
+		max-width: 60%;
+		padding-top: 23px;
+	}
+	
+	#field{
+		margin-top: 10%;
+	}
+	
+	.str_div{
+		font-size: 41px;
+	}
+	
+	.time_block{
+		margin-top: 10px;
+	}
+	
+	.text_time_block{
+		padding-right: 12px;
+	}
+	
+	#result{
+		margin-top: 10%;
+	}
+	
+	.center_content{
+		margin-top: 23px;
+	}
+}	
