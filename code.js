@@ -255,8 +255,10 @@ const game = {
 
 				if(obj.classList.contains("closeCell")){
 					if(this.field[i][j] == 0){
+						obj.classList.remove("flag");
 						this.openEmpty(i, j);
 					}else if((this.field[i][j] < 10) && (this.field[i][j] > 0)){
+						obj.classList.remove("flag");
 						this.openNumber(i, j, obj);
 					}else if(this.field[i][j] == 10){
 						obj.classList.remove("closeCell", "flag");
