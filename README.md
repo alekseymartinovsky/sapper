@@ -1,2 +1,2 @@
 # sapper
-Classic game sapper is made as a single page application
+Классическая игра сапёр сделана на javascript как SPA, данные об игре храняться в localstorage, есть переключение уровней и секндомер, адаптивность реализована через media-запорсы
